@@ -11,17 +11,11 @@ import org.springframework.stereotype.Service;
 public class ApplicationService {
 
     @Autowired
-    private LoginController loginController;;
-
-    @Autowired
-    private MenuController menuController;
+    private LoginController loginController;
 
     public void execute() {
-//        TelaLoginView telaLoginView = new TelaLoginView(null);
-//        loginController.init(telaLoginView);
-//        loginController.abrirTelaLogin();
-        MenuView menuView = new MenuView();
-        menuController.init(menuView);
-        menuController.abrirMenu();
+        TelaLoginView telaLoginView = new TelaLoginView(null);
+        loginController.init(telaLoginView);
+        loginController.abrirTelaLogin();
     }
 }
