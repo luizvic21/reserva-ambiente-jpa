@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence               http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="reserva-ambiente" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>br.edu.ifsc.aluno.victor.model.Ambiente</class>
+    <class>br.edu.ifsc.aluno.victor.model.Bloco</class>
+    <class>br.edu.ifsc.aluno.victor.model.Coordenador</class>
+    <class>br.edu.ifsc.aluno.victor.model.Cidade</class>
+    <class>br.edu.ifsc.aluno.victor.model.Curso</class>
+    <class>br.edu.ifsc.aluno.victor.model.CursoDisciplina</class>
+    <class>br.edu.ifsc.aluno.victor.model.Disciplina</class>
+    <class>br.edu.ifsc.aluno.victor.model.Endereco</class>
+    <class>br.edu.ifsc.aluno.victor.model.Servidor</class>
+    <class>br.edu.ifsc.aluno.victor.model.Usuario</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/reserva_ambiente"/>
+      <property name="javax.persistence.jdbc.user" value="admin"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="admin123"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.jdbc.time_zone" value="UTC"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
